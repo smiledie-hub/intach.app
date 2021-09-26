@@ -1,0 +1,64 @@
+.layout {
+  display: flex;
+  position: relative;
+
+  &-aside {
+    position: fixed;
+    width: 70px;
+    height: 100%;
+    top: 0;
+    padding: 20px 10px 20px 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-main {
+    padding: 20px 20px 20px 90px;
+    width: 100%;
+  }
+}
+
+body {
+
+  &.theme--dark {
+    .layout {
+      &-aside {
+        background-color: #252525;
+      }
+    }
+  }
+
+  &.theme--light {
+    .layout {
+      &-aside {
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  &.nav--left {
+    .layout{
+      &-main {
+        padding: 20px 20px 20px 90px;
+      }
+      &-aside {
+        padding: 20px 10px 20px 30px;
+        left: 0;
+      }
+    }
+  }
+  &.nav--right {
+    .layout{
+      &-main {
+        padding: 20px 90px 20px 20px;
+      }
+      &-aside {
+        padding: 20px 30px 20px 10px;
+        right: 0;
+      }
+    }
+  }
+}

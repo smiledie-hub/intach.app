@@ -1,0 +1,36 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+html, body {
+  &.theme--dark {
+    .nav{
+      &-item {
+        color: #575E66;
+        &.router-link-active, &.router-link-exact-active {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  &.theme--light {
+    .nav{
+      &-item {
+        color: #99A2AD;
+        &.router-link-active, &.router-link-exact-active {
+          color: #5D5FEF;
+        }
+      }
+    }
+  }
+}
